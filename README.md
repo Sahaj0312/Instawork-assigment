@@ -6,9 +6,10 @@ This is a simple django application that allows a user to keep track of members 
 
 This assumes that `python3` is linked to valid installation of python 3 and that `pip` is installed and `pip3`is valid for installing python 3 packages.
 
-First, clone the repository:
+First, clone the repository and navigate to the Instawork-assigment project:
 
     $ git clone https://github.com/Sahaj0312/Instawork-assigment.git
+    $ cd Instawork-assigment
 
 Then, install all the requirements:
 
