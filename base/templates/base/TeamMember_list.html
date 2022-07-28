@@ -1,0 +1,24 @@
+{% extends 'base/main.html' %}
+{% block content %}
+<h1>Team members</h1>
+<h3>You have {{object_list|length}} team member{{object_list|length|pluralize:"s"}} </h3>
+<a  id = "plus" class = "fa fa-plus" style="font-size:36px" href="{% url 'member-add' %}"></a>
+<h3><u>Members:</u></h3>
+    {% for member in object_list %}
+    <hr />
+    <p>
+        <b>{{member.firstName}} {{member.lastName}} </b>
+        {% if member.admin %} 
+        <b>(admin)</b>
+        {% endif %}
+        <a href="{% url 'member-update' member.id  %}">edit</a>
+        <a href="{% url 'member-delete' member.id  %}">delete</a>
+        <br>
+        {{member.phoneNumber}}
+        <br>
+        {{member.email}}
+    </p>
+    {% empty %}
+    <h3>No members in team</h3>
+    {% endfor %}
+{% endblock content %}
