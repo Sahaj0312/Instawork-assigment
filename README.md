@@ -14,6 +14,10 @@ Then, install all the requirements:
 
     $ pip3 install -r requirements.txt
 
+Then, apply the migrations:
+
+    $ python3 manage.py migrate 
+
 And then, start the development server:
 
     $ python3 manage.py runserver
